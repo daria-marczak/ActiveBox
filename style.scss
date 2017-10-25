@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Playfair+Display:200, 400,700";
+@import "https://fonts.googleapis.com/css?family=Raleway|Open+Sans:700|Playfair+Display:200, 400,700";
 
 $primary: 'Open Sans', sans-serif;
 $secondary: 'Raleway', sans-serif;
@@ -361,27 +361,38 @@ footer {
 /* MEDIA QUERIES BIGGER SCREEN */
 
 @media (min-width: 1200px) {
+	header .jumbotron {
+		height: 50vh;
+	}
 
 	.display-3 {
-            font-size: 50px;
-        }
+        font-size: 50px;
+    }
 
 	.carousel-caption {
 		display: none;
 	}
 }
 
-@media (min-width: 1200px) and (max-width: 1391px) {
-	.text {
-		q {
-			font-size: 34px;
-		}
+@media (min-width: 1200px) and (max-width: 1500px) {
+	.text q {
+		font-size: 34px;
 	}
 }
 
 /* BETWEEN TWO SCREENS */
 
 @media (min-width: 768px) and (max-width: 1199px) {
+	header {
+		.jumbotron {
+			height: 50vh;
+		}
+
+		.display-3 {
+            font-size: 30px;
+        }
+	}
+
 	.text {
 		display: none;
 	}
@@ -404,8 +415,7 @@ footer {
 		background-color: transparent;
 		border: 0px;
 
-		.navbar-collapse
-			a {
+		.navbar-collapse a {
 				font-size: 12px;
 				max-width: 110px;
 			}
@@ -419,12 +429,18 @@ footer {
 @media (max-width: 767px) {
 	header {
 		.jumbotron {
-			height: 50vh;
+			height: 30vh;
 		}
 
 		.display-3 {
             padding-top: 15px;
         }
+	}
+
+	.layer {
+		opacity: 1;
+		background-color: transparent;
+		text-shadow: 2px 1px black;
 	}
 
 	.carousel-caption {
@@ -451,6 +467,17 @@ footer {
 			padding-bottom: 10px;
 		}
 	}
+}
 
-
+@media (max-width: 530px) {
+	.carousel-caption {
+		width: 90%;
+		left: 5%;
+		q {
+			font-size: 10px;
+		}
+		p {
+			font-size: 8px;
+		}
+	}
 }
